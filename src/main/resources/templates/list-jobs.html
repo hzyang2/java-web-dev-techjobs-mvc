@@ -11,6 +11,55 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
+    <table class="job-listing">
+        <th:block th:each="job : ${jobs}">
+            <tr>
+                <td>
+                    ID: <span th:text = "${job.getId()}"></span><br>
+                    Name: <span th:text = "${job.getName()}"></span><br>
+                    Employer: <span th:text = "${job.getEmployer()}"></span><br>
+                    Location: <span th:text = "${job.getLocation()}"></span><br>
+                    Position Type: <span th:text = "${job.getPositionType()}"></span><br>
+                    Skill: <span th:text = "${job.getCoreCompetency()}"></span>
+                </td>
+            </tr>
+        </th:block>
+    </table>
+
+<!--    <th:block th:each="job : ${jobs}">-->
+<!--        <table class="job-listing">-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div th:text = "'ID: ' + ${job.getId()}"></div>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div th:text = "'Name: ' + ${job.getName()}"></div>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div th:text = "'Employer: ' + ${job.getEmployer()}"></div>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div th:text = "'Location: ' + ${job.getLocation()}"></div>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div th:text = "'Position Type: ' + ${job.getPositionType()}"></div>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>-->
+<!--                    <div th:text = "'Skill: ' + ${job.getCoreCompetency()}"></div>-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--    </th:block>-->
 
 </div>
 
